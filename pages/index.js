@@ -1,6 +1,7 @@
 import { useState } from 'react';
 import Image from 'next/image';
 import image from '../public/images/image.jpeg';
+import logo from '../public/images/logo.svg';
 
 export default function Home() {
     const [menuOpen, setMenuOpen] = useState(false);
@@ -26,8 +27,7 @@ export default function Home() {
             </header>
             <main>
                 <div className="titulo">
-                    <h1>Luciana Araujo</h1>
-                    <h2>Psicologia Infantil</h2>
+                    <Image src={logo} width={400} height={400} />
                     <h3>CPR xx/xxxxx</h3>
                 </div>
 
@@ -64,11 +64,14 @@ export default function Home() {
                 </div>
             </main>
             <footer>
-                <p>Luciana Pereira Dantas Pacheco Pacelli</p>
-                <p>CRP XX/XXXXX</p>
-                <p>(84)99999-9999</p>
-                <p>lucianapereira@gmail.com</p>
-                <a href="#">Entre em contato</a>
+                <div><Image src={logo} width={100} height={100} /></div>
+                <div>
+                    <p>Luciana Pereira Dantas Pacheco Pacelli</p>
+                    <p>CRP XX/XXXXX</p>
+                    <p>(84)99999-9999</p>
+                    <p>lucianapereira@gmail.com</p>
+                    <a href="#">Entre em contato</a>
+                </div>
             </footer>
         </body>
     );
