@@ -1,0 +1,248 @@
+@import url('https://fonts.googleapis.com/css2?family=Tenor+Sans&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=League+Spartan:wght@100..900&display=swap');
+
+.tenor-sans-regular {
+  font-family: "Tenor Sans", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+}
+
+.league-spartan-title {
+  font-family: "League Spartan", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 400;
+  font-style: normal;
+}
+
+header {
+  display: flex;  
+  align-items: center;
+  justify-content: center;
+  background-color: #fff;
+  height: 10vh;
+  width: 100%;
+  box-sizing: border-box;
+  padding: 0 20px;
+}
+
+nav {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  color: #fff;
+}
+
+.menu-toggle {
+  display: none;
+  font-size: 1.5rem;
+  background: none;
+  border: none;
+  cursor: pointer;
+}
+
+.menu {
+  display: flex;
+  gap: 10px;
+}
+
+.menu a {
+  text-decoration: none;
+  font-size: 1.2rem;
+  font-weight: bold;
+  background-color: #e6aca8;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 10px;
+  border-radius: 5px;
+  box-sizing: border-box;
+  transition: background-color 0.3s ease;
+}
+
+.menu a:hover {
+  background-color: #d89b8f;
+}
+
+@media (max-width: 768px) {
+  .menu-toggle {
+    display: block;
+  }
+
+  .menu {
+    display: none;
+    flex-direction: column;
+    width: 100%;
+    position: absolute;
+    top: 10vh;
+    right: 0;
+    background-color: #fff;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    z-index: 1000;
+  }
+
+  .menu.open {
+    display: flex;
+  }
+
+  .menu a {
+    width: 80%; /* Ajuste a largura conforme necessário */
+    margin: 5px auto; /* Centraliza os botões no menu */
+  }
+}
+
+@media (max-width: 480px) {
+  .menu a {
+    font-size: 1rem;
+    padding: 8px;
+    height: 40px;
+    width: 90%; /* Ajuste a largura conforme necessário */
+  }
+}
+
+.titulo {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  text-align: center;
+  margin: 20px 0;
+}
+
+.titulo h1 {
+  font-family: 'Cocomat Pro';
+  font-weight: bold;
+  color: #b3c987;
+}
+
+.titulo h2 {
+  font-family: 'Cocomat Pro';
+  color: #e6aca8;
+}
+
+body {
+  background-color: #dae3e1;
+  font-family: 'Tenor Sans';
+}
+
+.card {
+  display: flex;
+  background-color: #fff;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  overflow: hidden;
+  width: 100%;
+  max-width: 800px;
+  margin: 20px auto;
+  padding: 20px;
+  gap: 20px;
+  flex-direction: row; /* Mantém a imagem e o conteúdo lado a lado */
+  flex-wrap: nowrap; /* Impede que os itens se ajustem quando a largura da tela for pequena */
+}
+
+.card-img {
+  width: 40%; /* A imagem ocupa 40% do espaço */
+  height: auto;
+  border-radius: 8px;
+  object-fit: cover;
+}
+
+.card-content {
+  display: flex;
+  flex-direction: column; /* O conteúdo textual fica em coluna */
+  justify-content: center;
+  gap: 10px;
+  flex-grow: 1;
+}
+
+.card-content p {
+  font-size: 1rem;
+  line-height: 1.6;
+  color: #555;
+  border-radius: 10px;
+}
+
+/* Estilos para o botão */
+.btn {
+  text-decoration: none;
+  padding: 10px 20px;
+  background-color: #e6aca8;
+  color: #fff;
+  font-weight: bold;
+  border-radius: 5px;
+  display: inline-block;
+  text-align: center;
+}
+
+.btn:hover {
+  background-color: #88c2a9;
+}
+
+.servicos {
+  text-align: center;
+  margin: 40px 0;
+}
+
+.servicos .cards {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  flex-wrap: wrap; /* Permite que os cards se ajustem em telas menores */
+}
+
+footer {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  background-color: #fff;
+  padding: 20px;
+  text-align: center;
+  border-top: 1px solid #e6e6e6;
+}
+
+footer p, footer a {
+  margin: 5px 0;
+  color: #555;
+  text-decoration: none;
+}
+
+footer a:hover {
+  color: #88c2a9;
+}
+
+/* Media queries para responsividade */
+@media (max-width: 1024px) {
+  .card {
+    flex-direction: column;
+    max-width: 100%;
+  }
+
+  .card-img {
+    width: 100%;
+  }
+}
+
+@media (max-width: 768px) {
+  .card {
+    padding: 10px;
+  }
+
+  .servicos .cards {
+    flex-direction: column;
+    align-items: center;
+  }
+}
+
+@media (max-width: 480px) {
+  .card {
+    padding: 10px;
+  }
+
+  .card-content p {
+    font-size: 0.9rem;
+  }
+
+  .btn {
+    padding: 8px 16px;
+  }
+}
