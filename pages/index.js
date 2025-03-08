@@ -27,14 +27,14 @@ export default function Home() {
             </header>
             <main>
                 <div className="titulo">
-                    <Image src={logo} width={400} height={400} />
+                    <Image src={logo} className='MainLogo' alt="Texto escrito Luciana Araujo Psicóloga Infantil" />
                     <h3>CPR xx/xxxxx</h3>
                 </div>
 
                 <div className="card">
                     <Image
                         src={image}
-                        alt="Imagem Exemplo"
+                        alt="Mulher branca de estatura baixa, usando óculos redondos, calça branca e camiseta marrom. Luciana Araujo, psicóloga infantil."
                         width={500}
                         height={300}
                         className="card-img"
@@ -64,7 +64,7 @@ export default function Home() {
                 </div>
             </main>
             <footer>
-                <div><Image src={logo} width={100} height={100} /></div>
+                <div><Image src={logo} className='FooterLogo' alt="Texto escrito Luciana Araujo Psicóloga Infantil" /></div>
                 <div>
                     <p>Luciana Pereira Dantas Pacheco Pacelli</p>
                     <p>CRP XX/XXXXX</p>

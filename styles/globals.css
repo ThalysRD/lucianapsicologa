@@ -106,9 +106,6 @@ video {
   max-width: 100%;
 }
 
-
-
-
 @import url('https://fonts.googleapis.com/css2?family=Tenor+Sans&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=League+Spartan:wght@100..900&display=swap');
 
@@ -149,6 +146,7 @@ nav {
   background: none;
   border: none;
   cursor: pointer;
+  color: #000; /* Adiciona a cor preta ao texto do botão */
 }
 
 .menu {
@@ -322,6 +320,12 @@ footer {
   position: absolute;
   left: 0;
   padding-left: 20px;
+  width: 100px;
+  height: 100px;
+  background-image: url('../public/images/logo.svg');
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: left center;
 }
 
 footer p,
@@ -335,31 +339,67 @@ footer a:hover {
   color: #88c2a9;
 }
 
+.MainLogo {
+  width: 400px;
+  height: auto;
+}
+
+.FooterLogo {
+  width: 100px;
+  height: auto;
+}
+
 @media (max-width: 1024px) {
   .card {
     flex-direction: column;
-    max-width: 100%;
+    max-width: 90%; /* Ajuste para garantir que os cards não ocupem 100% da largura */
+    margin: 20px auto;
   }
 
   .card-img {
     width: 100%;
+  }
+
+  .MainLogo {
+    width: 300px;
+  }
+
+  .FooterLogo {
+    width: 80px;
   }
 }
 
 @media (max-width: 768px) {
   .card {
     padding: 10px;
+    max-width: 90%; /* Ajuste para garantir que os cards não ocupem 100% da largura */
+    margin: 20px auto;
   }
 
   .servicos .cards {
     flex-direction: column;
     align-items: center;
   }
+
+  .footer-logo {
+    width: 80px;
+    height: 80px;
+  }
+
+  .MainLogo {
+    width: 200px;
+  }
+
+  .FooterLogo {
+    width: 60px;
+  }
 }
 
 @media (max-width: 480px) {
   .card {
     padding: 10px;
+    max-width: 90%; /* Ajuste para garantir que os cards não ocupem 100% da largura */
+    margin: 20px auto;
   }
 
   .card-content p {
@@ -369,4 +409,18 @@ footer a:hover {
   .btn {
     padding: 8px 16px;
   }
+
+  .footer-logo {
+    width: 60px;
+    height: 60px;
+  }
+
+  .MainLogo {
+    width: 150px;
+  }
+
+  .FooterLogo {
+    width: 50px;
+  }
 }
+
